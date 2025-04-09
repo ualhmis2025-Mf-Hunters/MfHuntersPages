@@ -1,15 +1,15 @@
 ---
 layout: page
-title: JGM847
-permalink: /jgm847/
+title: AAF925
+permalink: /aaf925/
 ---
 
-# Jorge González Muñoz
+# Alejandro Avilés Fernández
 
 Estudiante de Ingeniería Informática en la universidad de Almería. <br>
-Usuario de GitHub [jgm847](https://github.com/jgm847)
+Usuario de GitHub [aaf925](https://github.com/aaf925)
 
-Soy Jorge, apasionado de la infórmatica. Nací en Adra y actualmente estoy estudiando el grado de Ingeniería informática en la Universidad de Almería. Desde chico siempre me ha gustado la tecnología y tuve muy claro que quería dedicarme a este mundillo.
+Nací en Sevilla y actualmente resido en Almería. Estoy en tercer curso de Ingeniería Informática (doble rama de Ingeniería del Software y Tecnologías de la Información) en la Universidad de Almería.
 
 ## Mis Habilidades
 
@@ -21,14 +21,14 @@ Soy Jorge, apasionado de la infórmatica. Nací en Adra y actualmente estoy estu
 
 ## Educación
 
-- **[E.S.O.]** – I.E.S. Gaviota 2019/2020
-- **[Bachillerato Tecnológico]** – I.E.S. Gaviota 2021/2022
-- **[Grado Ingeniería Informática (Menciones: INSO/TI)]** - Universidad de Almería 2022-actualidad
-
+- **[E.S.O.]** – I.E.S. La Campiña 2019/2020
+- **[Bachillerato de Ciencias de la Salud]** – I.E.S. La Campiña 2021/2022
+- **[Grado Ingeniería del Software]** - Universidad de Almería 2022-actualidad
 ## Contacto
 
-Si deseas saber más o simplemente conectar, no dudes en [enviar un correo electrónico](mailto:jgm847@inlumine.ual.es).
+Si deseas saber más o simplemente conectar, no dudes en [enviar un correo electrónico](mailto:aaf925@inlumine.ual.es).
 
 ---
 
 Gracias por visitar mi página. ¡Espero que podamos conectarnos pronto!
+
