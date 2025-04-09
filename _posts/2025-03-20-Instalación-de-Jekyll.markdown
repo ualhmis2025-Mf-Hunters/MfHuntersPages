@@ -1,10 +1,11 @@
 ---
+layout: post
 title: Instalación de Jekyll
-author: anm020
+author: Antonio
 date: 2025-03-20
-categories: [Tutorial]
-tags: [writing]
-render_with_liquid: false
+pin: true
+math: false
+mermaid: false
 ---
 
 # Instalación y Configuración básica de Jekyll
@@ -19,22 +20,22 @@ Antes de instalar Jekyll, asegúrate de tener los siguientes requisitos en tu si
 
 Puedes verificar la versión de Ruby instalada con el siguiente comando:
 
-```powershell
+```bash
 ruby -v
 ```
 
 Si no tienes Ruby instalado, puedes hacerlo mediante:
 
 - **Ubuntu/Debian:**
-  ```sh
+  ```bash
   sudo apt update && sudo apt install ruby-full build-essential zlib1g-dev
   ```
 - **MacOS (usando Homebrew):**
-  ```sh
+  ```bash
   brew install ruby
   ```
 - **Windows (usando Chocolatey):**
-  ```sh
+  ```bash
   choco install ruby -y
   ```
 

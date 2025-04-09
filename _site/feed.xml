@@ -1,17 +1,445 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-04-09T14:01:42+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2025/04/09/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2025-04-09T13:47:52+02:00</published><updated>2025-04-09T13:47:52+02:00</updated><id>http://localhost:4000/jekyll/update/2025/04/09/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2025/04/09/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-04-09T16:21:12+02:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">MfHunters</title><subtitle>Blog creado para la asignatura de Herramientas y Métodos de la Ingeniería del Software.</subtitle><entry><title type="html">Guía Básica de SonarQube</title><link href="http://localhost:4000/2025/04/02/Tutorial-de-Sonar.html" rel="alternate" type="text/html" title="Guía Básica de SonarQube" /><published>2025-04-02T00:00:00+02:00</published><updated>2025-04-02T00:00:00+02:00</updated><id>http://localhost:4000/2025/04/02/Tutorial-de-Sonar</id><content type="html" xml:base="http://localhost:4000/2025/04/02/Tutorial-de-Sonar.html"><![CDATA[<h2 id="sonarqube-es-una-plataforma-de-inspección-continua-de-calidad-de-código-que-ayuda-a-detectar-bugs-vulnerabilidades-y-code-smells-en-20-lenguajes-de-programación">SonarQube es una plataforma de inspección continua de calidad de código que ayuda a detectar bugs, vulnerabilidades y code smells en 20+ lenguajes de programación.</h2>
 
-<p>Jekyll requires blog post files to be named according to the following format:</p>
+<h2 id="-1-instalación-rápida">🚀 1. Instalación Rápida</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Descargar versión Community (requiere Java 11+)</span>
+docker pull sonarqube:community
 
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+<span class="c"># Ejecutar contenedor (puerto 9000 por defecto)</span>
+docker run <span class="nt">-d</span> <span class="nt">-p</span> 9000:9000 <span class="nt">--name</span> sonarqube sonarqube:community
+</code></pre></div></div>
 
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<h2 id="-2-configuración-inicial">🔧 2. Configuración Inicial</h2>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Cambiar contraseña de admin en primer login
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+Crear proyecto manual o vinculando repositorio
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry></feed>
+Generar token de seguridad para análisis
+
+Seleccionar lenguaje y metodología de análisis
+</code></pre></div></div>
+
+<h2 id="-3-análisis-de-código">📊 3. Análisis de Código</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Ejemplo para proyecto Java (Maven)</span>
+mvn clean verify sonar:sonar <span class="se">\</span>
+  <span class="nt">-Dsonar</span>.projectKey<span class="o">=</span>mi-proyecto <span class="se">\</span>
+  <span class="nt">-Dsonar</span>.host.url<span class="o">=</span>http://localhost:9000 <span class="se">\</span>
+  <span class="nt">-Dsonar</span>.login<span class="o">=</span>TU_TOKEN
+</code></pre></div></div>
+
+<h2 id="-4-métricas-clave">🔍 4. Métricas Clave</h2>
+
+<p>✔ Bugs: Errores reales en tiempo de ejecución
+✔ Vulnerabilidades: Problemas de seguridad
+✔ Code Smells: Malas prácticas mantenibles
+✔ Cobertura: % de código testeado
+✔ Duplicación: Código repetido</p>
+
+<h2 id="️-5-reglas-comunes">🛡️ 5. Reglas Comunes</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// Ejemplo de detección en Java
+<span class="k">if</span> <span class="o">(</span>condición<span class="o">)</span> <span class="o">{</span>           // Code smell: condiciones redundantes
+    <span class="k">return </span><span class="nb">true</span><span class="p">;</span>
+<span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="k">return </span><span class="nb">false</span><span class="p">;</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<h2 id="️-6-integración-con-cicd">⚙️ 6. Integración con CI/CD</h2>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Ejemplo para GitHub Actions</span>
+- name: SonarQube Scan
+  uses: SonarSource/sonarqube-scan-action@master
+  <span class="nb">env</span>:
+    SONAR_TOKEN: <span class="err">$</span>
+    SONAR_HOST_URL: <span class="err">$</span>
+</code></pre></div></div>]]></content><author><name>aaf925</name></author><summary type="html"><![CDATA[SonarQube es una plataforma de inspección continua de calidad de código que ayuda a detectar bugs, vulnerabilidades y code smells en 20+ lenguajes de programación.]]></summary></entry><entry><title type="html">Git Branching Cheatsheet</title><link href="http://localhost:4000/git/cheatsheet/2025/03/21/Cheatsheet-de-Git-branching.html" rel="alternate" type="text/html" title="Git Branching Cheatsheet" /><published>2025-03-21T00:00:00+01:00</published><updated>2025-03-21T00:00:00+01:00</updated><id>http://localhost:4000/git/cheatsheet/2025/03/21/Cheatsheet-de-Git-branching</id><content type="html" xml:base="http://localhost:4000/git/cheatsheet/2025/03/21/Cheatsheet-de-Git-branching.html"><![CDATA[<h1 id="-git-branching-cheatsheet">🧪 Git Branching Cheatsheet</h1>
+
+<p>Una referencia rápida para trabajar con ramas en Git. Ideal para cuando necesitas moverte entre ramas, crear nuevas o fusionarlas rápidamente.</p>
+
+<hr />
+
+<h2 id="-crear-ramas">📋 Crear ramas</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Crear una nueva rama (sin cambiar a ella)</span>
+git branch nombre-de-la-rama
+
+<span class="c"># Crear una nueva rama y cambiarse a ella</span>
+git checkout <span class="nt">-b</span> nombre-de-la-rama
+
+<span class="c"># Crear una nueva rama a partir de otra existente</span>
+git checkout <span class="nt">-b</span> nueva-rama origen/rama-base
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-cambiar-entre-ramas">🔄 Cambiar entre ramas</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Cambiar de rama</span>
+git checkout nombre-de-la-rama
+
+<span class="c"># Mostrar todas las ramas locales</span>
+git branch
+
+<span class="c"># Mostrar todas las ramas (locales + remotas)</span>
+git branch <span class="nt">-a</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="️-borrar-ramas">🗑️ Borrar ramas</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Eliminar una rama local (si ya fue fusionada)</span>
+git branch <span class="nt">-d</span> nombre-de-la-rama        <span class="c"># Si ya fue fusionada</span>
+git branch <span class="nt">-D</span> nombre-de-la-rama        <span class="c"># Forzar borrado</span>
+
+<span class="c"># Eliminar una rama del repositorio remoto</span>
+git push origin <span class="nt">--delete</span> nombre-de-la-rama
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-subir-ramas-al-repositorio-remoto">🚀 Subir ramas al repositorio remoto</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Publicar una nueva rama al repositorio remoto y configurarla para hacer push</span>
+git push <span class="nt">-u</span> origin nombre-de-la-rama
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-fusionar-ramas-merge">🔁 Fusionar ramas (merge)</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Integrar cambios de otra rama en la actual</span>
+git merge nombre-de-la-rama
+
+<span class="c"># Fusionar sin crear un commit automático</span>
+git merge <span class="nt">--no-commit</span> nombre-de-la-rama
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-rebase">🧠 Rebase</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Mover commits actuales para que partan desde otra rama (rebase)</span>
+git rebase nombre-de-la-rama
+
+<span class="c"># Interactivo (para reorganizar, editar, etc.)</span>
+git rebase <span class="nt">-i</span> HEAD~3
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-comparar-ramas">🧭 Comparar ramas</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Mostrar los cambios entre dos ramas</span>
+git diff rama1..rama2
+
+<span class="c"># Ver los commits en una rama que no están en otra</span>
+git log rama1..rama2
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-limpieza">🧼 Limpieza</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Limpiar ramas remotas eliminadas del listado local</span>
+git remote prune origin
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-tips-extra">🔍 Tips extra</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Cambiar el nombre de una rama local</span>
+git branch <span class="nt">-m</span> nuevo-nombre
+
+<span class="c"># Mostrar en qué rama estás actualmente</span>
+git branch <span class="nt">--show-current</span>
+
+<span class="c"># Establecer la rama remota por defecto para hacer push</span>
+git push <span class="nt">--set-upstream</span> origin nombre-de-la-rama
+</code></pre></div></div>
+
+<hr />
+
+<h1 id="-comandos-generales-de-git">🧰 Comandos generales de Git</h1>
+
+<p>Una recopilación más extensa de comandos útiles en Git, desde lo básico hasta herramientas avanzadas.</p>
+
+<h2 id="-configuración-inicial">🔧 Configuración inicial</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Configuración de usuario y validación</span>
+<span class="c"># Configurar nombre de usuario</span>
+git config <span class="nt">--global</span> user.name <span class="s2">"Tu Nombre"</span>
+
+<span class="c"># Configurar correo electrónico</span>
+git config <span class="nt">--global</span> user.email <span class="s2">"tu@email.com"</span>
+
+<span class="c"># Ver configuración actual</span>
+git config <span class="nt">--list</span>
+</code></pre></div></div>
+
+<h2 id="-repositorios">📁 Repositorios</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Inicialización y clonación de repositorios</span>
+<span class="c"># Inicializar un repositorio</span>
+git init
+
+<span class="c"># Clonar un repositorio</span>
+git clone https://github.com/usuario/repositorio.git
+
+<span class="c"># Ver el estado de los archivos</span>
+git status
+</code></pre></div></div>
+
+<h2 id="-commits">📝 Commits</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Agregar archivos y registrar cambios</span>
+<span class="c"># Añadir archivos al staging area</span>
+git add archivo.txt
+git add <span class="nb">.</span>        <span class="c"># Todos los archivos</span>
+
+<span class="c"># Realizar un commit</span>
+git commit <span class="nt">-m</span> <span class="s2">"Mensaje del commit"</span>
+
+<span class="c"># Añadir y commitear de una vez</span>
+git commit <span class="nt">-am</span> <span class="s2">"Mensaje del commit"</span>
+
+<span class="c"># Modificar el último commit</span>
+git commit <span class="nt">--amend</span>
+</code></pre></div></div>
+
+<h2 id="️-historial">🕰️ Historial</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Consultar historial de commits</span>
+<span class="c"># Ver historial de commits</span>
+git log
+
+<span class="c"># Ver historial en una línea por commit</span>
+git log <span class="nt">--oneline</span>
+
+<span class="c"># Ver historial con gráficas</span>
+git log <span class="nt">--graph</span> <span class="nt">--oneline</span> <span class="nt">--all</span>
+</code></pre></div></div>
+
+<h2 id="-sincronización-remota">🔄 Sincronización remota</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Manejo de orígenes remotos y sincronización</span>
+<span class="c"># Ver remotos configurados</span>
+git remote <span class="nt">-v</span>
+
+<span class="c"># Añadir un remoto</span>
+git remote add origin https://github.com/usuario/repositorio.git
+
+<span class="c"># Obtener cambios del remoto</span>
+git fetch
+
+<span class="c"># Descargar y fusionar cambios remotos</span>
+git pull
+
+<span class="c"># Subir cambios al remoto</span>
+git push
+</code></pre></div></div>
+
+<h2 id="-stash-guardar-cambios-sin-hacer-commit">🧪 Stash (guardar cambios sin hacer commit)</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Guardar y recuperar cambios temporales</span>
+<span class="c"># Guardar cambios sin commitear</span>
+git stash
+
+<span class="c"># Ver lista de stashes</span>
+git stash list
+
+<span class="c"># Aplicar el último stash</span>
+git stash apply
+
+<span class="c"># Aplicar y borrar el stash</span>
+git stash pop
+</code></pre></div></div>
+
+<h2 id="-limpieza-1">🧼 Limpieza</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Eliminar archivos no versionados</span>
+git clean <span class="nt">-f</span>
+
+<span class="c"># Eliminar archivos ignorados también</span>
+git clean <span class="nt">-fdX</span>
+</code></pre></div></div>
+
+<h2 id="-buscar">🔍 Buscar</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Buscar una palabra o patrón en el repo</span>
+git <span class="nb">grep</span> <span class="s2">"texto_a_buscar"</span>
+</code></pre></div></div>
+
+<h2 id="-submódulos">🧳 Submódulos</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Administración de submódulos</span>
+<span class="c"># Añadir submódulo</span>
+git submodule add https://github.com/usuario/proyecto
+
+<span class="c"># Inicializar y clonar submódulos</span>
+git submodule update <span class="nt">--init</span> <span class="nt">--recursive</span>
+</code></pre></div></div>
+
+<h2 id="-herramientas-de-diagnóstico">🧪 Herramientas de diagnóstico</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Inspección de cambios y autores</span>
+<span class="c"># Ver diferencias entre commits o ramas</span>
+git diff
+
+<span class="c"># Ver quién cambió cada línea de un archivo</span>
+git blame archivo.txt
+
+<span class="c"># Ver conflictos de fusión</span>
+git status
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-recursos-recomendados">📚 Recursos recomendados</h2>
+
+<ul>
+  <li><a href="https://git-scm.com/book/en/v2">Pro Git Book</a></li>
+  <li><a href="https://www.atlassian.com/git/tutorials">Atlassian Git Tutorials</a></li>
+</ul>
+
+<hr />
+
+<p>Con estos comandos tienes un arsenal completo para enfrentar la mayoría de los desafíos con Git. 🚀</p>]]></content><author><name>jgm847</name></author><category term="git" /><category term="cheatsheet" /><category term="git" /><category term="branching" /><category term="version-control" /><summary type="html"><![CDATA[🧪 Git Branching Cheatsheet]]></summary></entry><entry><title type="html">Instalación de Jekyll</title><link href="http://localhost:4000/2025/03/20/Instalaci%C3%B3n-de-Jekyll.html" rel="alternate" type="text/html" title="Instalación de Jekyll" /><published>2025-03-20T00:00:00+01:00</published><updated>2025-03-20T00:00:00+01:00</updated><id>http://localhost:4000/2025/03/20/Instalaci%C3%B3n-de-Jekyll</id><content type="html" xml:base="http://localhost:4000/2025/03/20/Instalaci%C3%B3n-de-Jekyll.html"><![CDATA[<h1 id="instalación-y-configuración-básica-de-jekyll">Instalación y Configuración básica de Jekyll</h1>
+
+<h2 id="requisitos-previos">Requisitos previos</h2>
+
+<p>Antes de instalar Jekyll, asegúrate de tener los siguientes requisitos en tu sistema:</p>
+
+<ul>
+  <li><strong>Ruby</strong> (versión 2.5.0 o superior)</li>
+  <li><strong>RubyGems</strong></li>
+  <li><strong>GCC y Make</strong> (para compilar extensiones nativas)</li>
+</ul>
+
+<p>Puedes verificar la versión de Ruby instalada con el siguiente comando:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby <span class="nt">-v</span>
+</code></pre></div></div>
+
+<p>Si no tienes Ruby instalado, puedes hacerlo mediante:</p>
+
+<ul>
+  <li><strong>Ubuntu/Debian:</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt update <span class="o">&amp;&amp;</span> <span class="nb">sudo </span>apt <span class="nb">install </span>ruby-full build-essential zlib1g-dev
+</code></pre></div>    </div>
+  </li>
+  <li><strong>MacOS (usando Homebrew):</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew <span class="nb">install </span>ruby
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Windows (usando Chocolatey):</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>choco <span class="nb">install </span>ruby <span class="nt">-y</span>
+</code></pre></div>    </div>
+
+    <p>Después de la instalación, asegúrate de agregar Ruby al <code class="language-plaintext highlighter-rouge">PATH</code> reiniciando la sesión de PowerShell.</p>
+  </li>
+</ul>
+
+<h2 id="instalación-de-jekyll">Instalación de Jekyll</h2>
+
+<p>Una vez que tengas Ruby instalado, puedes proceder a instalar Jekyll y Bundler ejecutando:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">jekyll</span><span class="w"> </span><span class="nx">bundler</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Verifica que Jekyll se ha instalado correctamente con:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">jekyll</span><span class="w"> </span><span class="nt">-v</span><span class="w">
+</span></code></pre></div></div>
+
+<h2 id="creación-de-un-nuevo-sitio">Creación de un nuevo sitio</h2>
+<p>Para crear un nuevo sitio en Jekyll, usa el siguiente comando:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">jekyll</span><span class="w"> </span><span class="nx">new</span><span class="w"> </span><span class="nx">mi-sitio</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Este comando generará una estructura de carpetas y archivos esenciales para tu sitio Jekyll.</p>
+
+<h2 id="configuración-básica">Configuración Básica</h2>
+<p>Dentro del directorio del sitio recién creado, hay un archivo llamado <code class="language-plaintext highlighter-rouge">_config.yml</code>. Aquí puedes realizar configuraciones básicas, como cambiar el título del sitio, la descripción y otros parámetros importantes. Un ejemplo de configuración sería:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Mi</span><span class="nv"> </span><span class="s">Blog</span><span class="nv"> </span><span class="s">en</span><span class="nv"> </span><span class="s">Jekyll"</span>
+<span class="na">author</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Tu</span><span class="nv"> </span><span class="s">Nombre"</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Un</span><span class="nv"> </span><span class="s">blog</span><span class="nv"> </span><span class="s">generado</span><span class="nv"> </span><span class="s">con</span><span class="nv"> </span><span class="s">Jekyll."</span>
+<span class="na">baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>
+<span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">http://tusitio.com"</span>
+</code></pre></div></div>
+
+<h2 id="ejecutar-el-servidor-local">Ejecutar el Servidor Local</h2>
+<p>Para previsualizar tu sitio localmente, navega al directorio del sitio y ejecuta:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">cd</span><span class="w"> </span><span class="nx">mi-sitio</span><span class="w">
+</span><span class="n">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">jekyll</span><span class="w"> </span><span class="nx">serve</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Esto iniciará un servidor en <code class="language-plaintext highlighter-rouge">http://localhost:4000/</code>, donde podrás ver tu sitio en acción.</p>
+
+<h2 id="conclusión">Conclusión</h2>
+<p>Jekyll es una excelente opción para generar sitios estáticos de manera rápida y eficiente. Con esta guía, has aprendido cómo instalarlo, configurarlo y ejecutarlo localmente en Windows usando PowerShell. ¡Ahora puedes comenzar a personalizar tu sitio!</p>]]></content><author><name>Antonio</name></author><summary type="html"><![CDATA[Instalación y Configuración básica de Jekyll]]></summary></entry><entry><title type="html">Mini Tutorial de GitLab</title><link href="http://localhost:4000/git/desarrollo/2025/03/19/Tutorial-de-GitLab.html" rel="alternate" type="text/html" title="Mini Tutorial de GitLab" /><published>2025-03-19T00:00:00+01:00</published><updated>2025-03-19T00:00:00+01:00</updated><id>http://localhost:4000/git/desarrollo/2025/03/19/Tutorial-de-GitLab</id><content type="html" xml:base="http://localhost:4000/git/desarrollo/2025/03/19/Tutorial-de-GitLab.html"><![CDATA[<h1 id="-mini-tutorial-de-gitlab">🚀 Mini Tutorial de GitLab</h1>
+
+<p>GitLab es una plataforma de DevOps que facilita el control de versiones, integración continua (CI) y colaboración en equipo. A continuación, te guiaré a través de los pasos básicos para empezar a usar GitLab.</p>
+
+<h2 id="-1-crear-un-repositorio-en-gitlab">📂 1. Crear un Repositorio en GitLab</h2>
+
+<ol>
+  <li><strong>Inicia sesión</strong> en <a href="https://gitlab.com/">GitLab</a>.</li>
+  <li>Haz clic en <strong>“New Project”</strong>.</li>
+  <li>Elige <strong>“Create Blank Project”</strong>.</li>
+  <li>Asigna un <strong>nombre</strong> al repositorio, selecciona la <strong>visibilidad</strong> (público o privado) y haz clic en <strong>“Create project”</strong>.</li>
+</ol>
+
+<hr />
+
+<h2 id="-2-clonar-un-repositorio-en-local">💻 2. Clonar un Repositorio en Local</h2>
+
+<p>Para trabajar con el repositorio en tu máquina, utiliza el siguiente comando:</p>
+
+<ol>
+  <li>
+    <p><strong>git bash</strong>
+git clone https://gitlab.com/usuario/nombre-del-repositorio.git</p>
+  </li>
+  <li>
+    <p>Luego, navega a la carpeta del repositorio: cd nombre-del-repositorio</p>
+  </li>
+</ol>
+
+<h2 id="-3-hacer-cambios-y-subirlos">📝 3. Hacer Cambios y Subirlos</h2>
+
+<ul>
+  <li><strong>Realiza cambios en los archivos</strong> del repositorio.</li>
+  <li><strong>Añade los cambios al área de staging</strong> con el siguiente comando:</li>
+</ul>
+
+<p><strong>git bash</strong>
+git add .</p>
+
+<ol>
+  <li>Confirma los cambios con un mensaje descriptivo:
+<strong>git commit</strong> -m “Descripción del cambio”</li>
+  <li>Sube los cambios al repositorio remoto para actualizarlo:
+git push origin main</li>
+</ol>
+
+<h2 id="-4-crear-una-rama-y-fusionar">🔄 4. Crear una Rama y Fusionar</h2>
+
+<ol>
+  <li>
+    <p><strong>Crear una nueva rama con el siguiente comando:</strong>
+git checkout -b nombre-de-la-rama</p>
+  </li>
+  <li>
+    <p><strong>Subir la nueva rama al repositorio remoto:</strong>
+git push origin nombre-de-la-rama</p>
+  </li>
+  <li>Crear un Merge Request (MR) en GitLab:</li>
+  <li>Ve a la pestaña “Merge Requests” en GitLab.</li>
+  <li>Haz clic en “New Merge Request”.</li>
+  <li>Selecciona las ramas origen y destino (por ejemplo, main o la rama correspondiente).</li>
+  <li>Haz clic en “Create merge request” para completar el proceso.</li>
+</ol>]]></content><author><name>aaf925</name></author><category term="Git" /><category term="Desarrollo" /><category term="GitLab" /><category term="Tutorial" /><summary type="html"><![CDATA[Aprende a usar GitLab para crear repositorios, colaborar y gestionar tus proyectos.]]></summary></entry></feed>
